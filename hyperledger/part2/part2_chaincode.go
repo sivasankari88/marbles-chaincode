@@ -175,6 +175,8 @@ func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte,
 	var name, jsonResp string
 	var err error
 
+	fmt.Println("#####About to read#####");
+
 	if len(args) != 1 {
 		return nil, errors.New("Incorrect number of arguments. Expecting name of the var to query")
 	}
